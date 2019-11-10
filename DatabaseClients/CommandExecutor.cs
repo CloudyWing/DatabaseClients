@@ -51,7 +51,7 @@ namespace CloudyWing.DatabaseClients {
         public object QueryScalar() {
             using (IDbConnection conn = CreateConnection())
             using (IDbCommand cmd = CreateCommand(conn)) {
-                return cmd.ExecuteNonQuery();
+                return cmd.ExecuteScalar();
             }
         }
 
